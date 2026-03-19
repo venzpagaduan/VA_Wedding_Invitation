@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pagaduan & Hernandez Nuptials</title>
+
+<!-- SEO -->
+<meta name="description" content="Join us as we celebrate the wedding of Venz & Angeline on December 3, 2026.">
+
+<!-- Styles -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- CURTAIN INTRO -->
+<div id="curtainIntro" role="button" aria-label="Open invitation">
+
+  <div class="curtain left"></div>
+  <div class="curtain right"></div>
+
+  <div class="tap-message">
+    Tap to Open
+  </div>
+
+</div>
+
+
+<!-- PETALS -->
+<canvas id="petals"></canvas>
+
+
+<!-- MUSIC CONTROL -->
+<div class="music-control" onclick="toggleMusic()" aria-label="Toggle music">
+🎵 Music
+</div>
+
+<audio id="bgMusic" loop preload="auto">
+  <source src="music.mp3" type="audio/mp3">
+</audio>
+
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="overlay"></div>
+
+  <div class="hero-content" data-aos="fade-up">
+
+<div class="hero-logo">
+<img src="logo.png" alt="VA Monogram">
+</div>
+
+<h1>Venz & Angeline</h1>
+
+
+    <p class="date">#heaVENZenttoANGELINE</p>
+    <p class="date">December 3, 2026</p>
+
+
+
+    <div id="countdown"></div>
+
+    <a href="#message" class="btn">View Invitation</a>
+
+  </div>
+
+</section>
+
+
+
+<section class="section dark">
+
+<!--
+    <p>
+      Join us for a blessed and beautiful celebration as we begin our new chapter together.
+      We are excited to share this special moment with you.
+    </p>
+
+-->
+
+</section>
+
+
+
+<!-- PARALLAX -->
+<section class="parallax-photo">
+
+  <div class="parallax-layer back"></div>
+
+  <div class="parallax-layer front">
+    <h2 data-aos="zoom-in">Our Love Story</h2>
+    
+  </div>
+</section>
+
+
+<section id="message" class="section message-overlay">
+
+ <!-- <div class="message-bg">
+    <img src="prenup9.jpg" alt="Prenup photo 9">
+  </div>
+-->
+  <div class="message-content" data-aos="fade-up">
+    <!-- <h2>Join Us</h2> -->
+    <p> It all began in a place dedicated to care and healing—a hospital where two lives quietly crossed paths.</p>
+    <br>
+    <p> October 18, 2022, Venz arrived for his final job interview, a moment filled with anticipation and hope. As he waited, Angeline happened to notice him—just a simple glance, nothing extraordinary at the time, yet it would become the beginning of something meaningful. </p>
+    <br>
+    <p>Soon after, Venz joined the team as an IT professional, while Angeline continued her work as an accountant. What started as casual conversations in the workplace gradually grew into a genuine friendship. Day by day, they found comfort in each other’s presence—sharing stories,  laughter, and small moments that made ordinary days feel a little more special. Over time, that friendship blossomed into something deeper.</p>
+    <br>
+    <p>After five months of getting to know each other, Venz and Angeline took a step forward and became a couple—choosing not just to share time, but to share their lives.From that unexpected meeting in a hospital hallway to the journey they now continue together, their story is a reminder that love often finds us in the most ordinary places, at the most unexpected times. </p>
+    <br>
+    <p>And now, they look forward to the next chapter—together.</p>
+  </div>
+</section>
+
+
+
+<!-- GALLERY -->
+<section class="section">
+
+  <h2 data-aos="fade-up">Prenup Photos</h2>
+
+  <div class="gallery">
+
+<img src="prenup1.jpg" alt="Prenup photo 1" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup2.jpg" alt="Prenup photo 2" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup3.jpg" alt="Prenup photo 3" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup4.jpg" alt="Prenup photo 4" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup5.jpg" alt="Prenup photo 5" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup6.jpg" alt="Prenup photo 6" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup7.jpg" alt="Prenup photo 7" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup8.jpg" alt="Prenup photo 8" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup9.jpg" alt="Prenup photo 9" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup10.jpg" alt="Prenup photo 10" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup11.jpg" alt="Prenup photo 11" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup12.jpg" alt="Prenup photo 12" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup13.jpg" alt="Prenup photo 13" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup14.jpg" alt="Prenup photo 14" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup15.jpg" alt="Prenup photo 15" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup16.jpg" alt="Prenup photo 16" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup17.jpg" alt="Prenup photo 17" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup18.jpg" alt="Prenup photo 18" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup19.jpg" alt="Prenup photo 19" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup20.jpg" alt="Prenup photo 20" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup21.jpg" alt="Prenup photo 21" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup22.jpg" alt="Prenup photo 22" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup23.jpg" alt="Prenup photo 23" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup24.jpg" alt="Prenup photo 24" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup25.jpg" alt="Prenup photo 25" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup26.jpg" alt="Prenup photo 26" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup27.jpg" alt="Prenup photo 27" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup28.jpg" alt="Prenup photo 28" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup29.jpg" alt="Prenup photo 29" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup30.jpg" alt="Prenup photo 30" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup31.jpg" alt="Prenup photo 31" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup32.jpg" alt="Prenup photo 32" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup33.jpg" alt="Prenup photo 33" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup34.jpg" alt="Prenup photo 34" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup35.jpg" alt="Prenup photo 35" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup36.jpg" alt="Prenup photo 36" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup37.jpg" alt="Prenup photo 37" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup38.jpg" alt="Prenup photo 38" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup39.jpg" alt="Prenup photo 39" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup40.jpg" alt="Prenup photo 40" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup41.jpg" alt="Prenup photo 41" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup42.jpg" alt="Prenup photo 42" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup43.jpg" alt="Prenup photo 43" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup44.jpg" alt="Prenup photo 44" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup45.jpg" alt="Prenup photo 45" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup46.jpg" alt="Prenup photo 46" onclick="openLightbox(this)" data-aos="fade-up">
+<img src="prenup48.jpg" alt="Prenup photo 46" onclick="openLightbox(this)" data-aos="fade-up">
+  </div>
+
+</section>
+
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" alt="Expanded image">
+</div>
+
+
+<section class="section dark">
+
+
+
+
+
+
+</section>
+
+
+<!-- TIMELINE -->
+
+<section class="section timeline-section">
+
+  <h2 class="timeline-title">Wedding Activities</h2>
+  <p class="timeline-subtitle">#heaVENZenttoANGELINE</p>
+
+  <div class="timeline-alt">
+
+    <div class="timeline-row left">
+      <div class="content">
+        <h3>THE CEREMONY</h3>
+        <p>Joined by grace, bound in love</p>
+      </div>
+    </div>
+
+    <div class="timeline-row right">
+      <div class="content">
+        <h3>THE PRELUDE: MEMORY HOUR</h3>
+        <p>Capture, scent, speak, shine<br>Memories begin here!</p>
+      </div>
+    </div>
+
+    <div class="timeline-row left">
+      <div class="content">
+        <h3>THE FIRST DANCE</h3>
+        <p>Steps of love, rhythm of forever</p>
+      </div>
+    </div>
+
+    <div class="timeline-row right">
+      <div class="content">
+        <h3>DINNER</h3>
+        <p>Feast, play, gift, gather<br>Joy around the table!</p>
+      </div>
+    </div>
+
+    <div class="timeline-row left">
+      <div class="content">
+        <h3>THE PREMIERE</h3>
+        <p>Stories shared, new chapter begins</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section dark">
+
+
+
+
+
+
+</section>
+
+
+
+
+<!--ENTORAGE-->
+
+<section class="section list-view">
+
+  <h2 data-aos="fade-up">Wedding Entourage</h2>
+
+  <div class="entourage-list">
+
+    <!-- Officiant -->
+    <div class="group">
+      <h4>Officiant</h4>
+      <p>SIC/KNP</p>
+    </div>
+
+    <!-- Couple -->
+    <div class="group highlight">
+      <h4>Groom</h4>
+      <p>Venancio Pagaduan Jr.</p>
+    </div>
+
+    <!-- Parents -->
+    <div class="group">
+      <h4>Groom's Parents</h4>
+      <p>Norma Pagaduan</p>
+      <p>Venancio Pagaduan Sr.</p>
+    </div>
+
+    <div class="group">
+      <h4>Bride's Parents</h4>
+      <p>Michelle Hernandez</p>
+      <p>Albert Hernandez Jr.</p>
+    </div>
+
+    <!-- Best Men -->
+    <div class="group">
+      <h4>Best Men</h4>
+      <p>Jhon Patrick Bonilla</p>
+      <p>Enrico Pagaduan</p>
+    </div>
+
+    <!-- Maids of Honor -->
+    <div class="group">
+      <h4>Maids of Honor</h4>
+      <p>Mary Dianne Marquez</p>
+      <p>Maria Antoinette Hernandez</p>
+    </div>
+
+    <!-- Principal Sponsors -->
+    <div class="group">
+      <h4>Principal Sponsors</h4>
+      <p>Carolina Bungay & Ramoncito Livelo</p>
+      <p>Ma Cleah Al Ghannameh & Gilbert Hernandez</p>
+      <p>Christy Omila & Lawrence Omila</p>
+      <p>Arlene Zabala & Aries Zabala</p>
+      <p>Bambi Ng & Michael Doan Ng</p>
+      <p>Anne Chico & Alfredo Chico</p>
+      <p>Cang & Magdalino Antipolo</p>
+      <p>Maria Lourdes Parcero & Cid Parcero</p>
+    </div>
+
+    <!-- Secondary Sponsors -->
+    <div class="group">
+      <h4>Secondary Sponsors</h4>
+      <p>Mayett Castro & Francis Pagaduan</p>
+      <p>Santa Grace Abayon & Teodulo Tanedo</p>
+      <p>Elma Carlos & Mark Louies Grijaldo</p>
+      <p>Franchezcka Pagaduan & Mar Jhun Abao</p>
+      <p>Francheska Perez & Ryan Abellana</p>
+      <p>Anne Margarette Syra Hernandez & Miken Karl De Dios</p>
+      <p>Anne Marichelle Hernandez & Daichi Batoon</p>
+      <p>Anne Mariabella Sofia Hernandez & Albert Matthew Sean Hernandez</p>
+    </div>
+
+    <!-- Special Roles -->
+    <div class="group">
+      <h4>Bible Bearer</h4>
+      <p>Axel Sanjer Abayon</p>
+    </div>
+
+    <div class="group">
+      <h4>Flower Girls</h4>
+      <p>Shekinah Antofina</p>
+      <p>Kiara Olivia Castro</p>
+      <p>Shenelle Antofina</p>
+    </div>
+
+    <div class="group">
+      <h4>Sign Bearers</h4>
+      <p>Riolonzo Pablo Parcero & Ryujin Kael Parcero</p>
+    </div>
+
+    <div class="group highlight">
+      <h4>Bride</h4>
+      <p>Maria Angeline Hernandez</p>
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<section class="section dark">
+
+
+
+
+</section>
+
+
+
+
+<section class="section">
+
+  <h2>Venue</h2>
+  <p class="venue-address">Asuncion Subdivision, Purok 3 Emilio Aguinaldo Highway, Biga 1, Silang, 4118 Cavite</p>
+
+  <div class="venue-container">
+
+    <div class="venue-info">
+      <h3>Le Don's Garden</h3>
+      
+      <p>
+        Join us as we celebrate our special day in this beautiful venue.
+      </p>
+
+      <!-- Use NORMAL map link here -->
+      <a href="https://maps.app.goo.gl/agzGZke87nmgfq4A9" target="_blank" class="btn">
+        Open in Google Maps
+      </a>
+    </div>
+
+    <div class="venue-map" data-aos="zoom-in">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.1179854952275!2d120.975124!3d14.246338999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd7e64c487c7d9%3A0x30ef2d99353c781f!2sLe%20Don%27s%20Garden!5e0!3m2!1sen!2sph!4v1773924431975!5m2!1sen!2sph"
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section dark">
+
+  <h2>Our Playlist</h2>
+  <p class="spotify-subtitle">Songs that tell our story</p>
+  <p>"A collection of songs we love and cherish"</p>
+
+  <div class="spotify-container" data-aos="fade-up">
+
+    <iframe 
+      src="https://open.spotify.com/embed/playlist/2duVXEmRIkhDMTe09u7RQC?utm_source=generator"
+      width="100%" 
+      height="380" 
+      style="border-radius:12px; border:none;"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+
+  </div>
+
+</section>
+
+
+
+
+<!-- GUESTBOOK -->
+<section class="section">
+
+  
+
+</section>
+
+
+<!-- RSVP -->
+<section class="section">
+
+  <h2>RSVP</h2>
+
+  <a href="https://forms.gle/YOURFORM" target="_blank" class="btn">
+    RSVP Now
+  </a>
+
+</section>
+
+
+<a href="https://forms.gle/YOURFORM" target="_blank" class="floating-rsvp">
+RSVP
+</a>
+
+
+
+<section class="section dark">
+
+
+
+
+</section>
+
+</main>
+
+
+<footer>
+<p>Pagaduan & Hernandez Wedding 2026</p>
+</footer>
+
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
