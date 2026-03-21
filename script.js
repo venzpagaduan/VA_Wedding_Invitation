@@ -247,3 +247,91 @@ curtain.addEventListener("touchstart",openCurtain);
 }
 
 });
+
+
+
+
+
+
+
+let currentIndex = 0;
+
+const track = document.getElementById("carouselTrack");
+const slides = track ? track.children : [];
+const dotsContainer = document.getElementById("carouselDots");
+
+/* CREATE DOTS */
+if(dotsContainer && slides.length){
+  for(let i=0;i<slides.length;i++){
+    const dot = document.createElement("span");
+    dot.onclick = () => goToSlide(i);
+    dotsContainer.appendChild(dot);
+  }
+}
+
+/* UPDATE SLIDE */
+function updateCarousel(){
+  if(!track) return;
+
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+  const dots = dotsContainer.children;
+  for(let i=0;i<dots.length;i++){
+    dots[i].classList.remove("active");
+  }
+  if(dots[currentIndex]){
+    dots[currentIndex].classList.add("active");
+  }
+}
+
+/* NEXT / PREV */
+window.moveSlide = function(step){
+  currentIndex += step;
+
+  if(currentIndex < 0) currentIndex = slides.length - 1;
+  if(currentIndex >= slides.length) currentIndex = 0;
+
+  updateCarousel();
+}
+
+/* GO TO */
+function goToSlide(index){
+  currentIndex = index;
+  updateCarousel();
+}
+
+/* AUTO SLIDE */
+setInterval(()=>{
+  window.moveSlide(1);
+},5000);
+
+/* INIT */
+updateCarousel();
+
+
+
+
+
+window.openGalleryModal = function(){
+  const modal = document.getElementById("galleryModal");
+  if(modal){
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden"; // prevent background scroll
+  }
+}
+
+window.closeGalleryModal = function(){
+  const modal = document.getElementById("galleryModal");
+  if(modal){
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+}
+
+/* close when clicking outside content */
+document.addEventListener("click", function(e){
+  const modal = document.getElementById("galleryModal");
+  if(e.target === modal){
+    closeGalleryModal();
+  }
+});
