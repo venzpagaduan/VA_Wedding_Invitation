@@ -1,117 +1,59 @@
-document.addEventListener("DOMContentLoaded", function(){
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({
+    behavior: "smooth"
+  });
+}
 
-/* AOS */
+const nav = document.querySelector("nav");
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelectorAll("nav a");
 
-AOS.init({
-duration:1200,
-once:true
+if (nav && navToggle) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("menu-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("menu-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Open menu");
+    });
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      nav.classList.remove("menu-open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Open menu");
+    }
+  });
+}
+
+/* FADE-IN ANIMATION */
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+
+    if(top < window.innerHeight - 100){
+      sec.style.opacity = 1;
+      sec.style.transform = 'translateY(0)';
+    }
+  });
+});
+
+sections.forEach(sec => {
+  sec.style.opacity = 0;
+  sec.style.transform = 'translateY(40px)';
+  sec.style.transition = 'all 0.8s ease';
 });
 
 
-/* COUNTDOWN */
 
-const weddingDate = new Date("Dec 3 2026").getTime();
-
-setInterval(()=>{
-
-const now = new Date().getTime();
-const distance = weddingDate - now;
-
-const days = Math.floor(distance/(1000*60*60*24));
-
-const countdown = document.getElementById("countdown");
-if(countdown){
-countdown.innerHTML = days + " days until our wedding";
-}
-
-},1000);
-
-
-/* LIGHTBOX */
-
-window.openLightbox = function(img){
-
-document.getElementById("lightbox").style.display="flex";
-document.getElementById("lightbox-img").src = img.src;
-
-}
-
-window.closeLightbox = function(){
-
-document.getElementById("lightbox").style.display="none";
-
-}
-
-
-/* MUSIC */
-
-const music = document.getElementById("bgMusic");
-
-window.toggleMusic = function(){
-
-if(!music) return;
-
-if(music.paused){
-music.play().catch(()=>{});
-}else{
-music.pause();
-}
-
-}
-
-
-/* PHOTO WALL */
-
-const upload = document.getElementById("photoUpload");
-
-if(upload){
-
-upload.addEventListener("change",function(e){
-
-const file = e.target.files[0];
-
-if(!file) return;
-
-const reader = new FileReader();
-
-reader.onload = function(){
-
-const img = document.createElement("img");
-
-img.src = reader.result;
-img.style.width="150px";
-img.style.margin="10px";
-
-document.getElementById("photoWall").appendChild(img);
-
-}
-
-reader.readAsDataURL(file);
-
-});
-
-}
-
-
-/* GUESTBOOK */
-
-window.addMessage = function(){
-
-const name = document.getElementById("name").value;
-const msg = document.getElementById("msg").value;
-
-if(!name || !msg) return;
-
-const entry = document.createElement("div");
-
-entry.innerHTML = "<b>"+name+"</b><p>"+msg+"</p>";
-
-document.getElementById("guestbook").appendChild(entry);
-
-document.getElementById("name").value="";
-document.getElementById("msg").value="";
-
-}
 
 /* FALLING PETALS (PNG VERSION) */
 
@@ -217,121 +159,20 @@ if (canvas) {
 }
 
 
-/* CURTAIN INTRO */
 
-const curtain = document.getElementById("curtainIntro");
+function applyStoryScale() {
+  const baseWidth = 1100;
+  const screenWidth = window.innerWidth;
 
-if(curtain){
+  const scale = Math.min(screenWidth / baseWidth, 1);
 
-document.body.style.overflow="hidden";
+  const story = document.querySelector('.story-fixed');
+  const wrapper = document.querySelector('.story-scale-wrapper');
 
-function openCurtain(){
+  if (!story || !wrapper) return;
 
-curtain.classList.add("open");
+  story.style.transform = `scale(${scale})`;
 
-if(music){
-music.play().catch(()=>{});
+  // adjust height to prevent collapsing
+  wrapper.style.height = `${story.offsetHeight * scale}px`;
 }
-
-document.body.style.overflow="auto";
-
-setTimeout(()=>{
-curtain.style.display="none";
-},1600);
-
-}
-
-curtain.addEventListener("click",openCurtain);
-curtain.addEventListener("touchstart",openCurtain);
-
-}
-
-});
-
-
-
-
-
-
-
-let currentIndex = 0;
-
-const track = document.getElementById("carouselTrack");
-const slides = track ? track.children : [];
-const dotsContainer = document.getElementById("carouselDots");
-
-/* CREATE DOTS */
-if(dotsContainer && slides.length){
-  for(let i=0;i<slides.length;i++){
-    const dot = document.createElement("span");
-    dot.onclick = () => goToSlide(i);
-    dotsContainer.appendChild(dot);
-  }
-}
-
-/* UPDATE SLIDE */
-function updateCarousel(){
-  if(!track) return;
-
-  track.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-  const dots = dotsContainer.children;
-  for(let i=0;i<dots.length;i++){
-    dots[i].classList.remove("active");
-  }
-  if(dots[currentIndex]){
-    dots[currentIndex].classList.add("active");
-  }
-}
-
-/* NEXT / PREV */
-window.moveSlide = function(step){
-  currentIndex += step;
-
-  if(currentIndex < 0) currentIndex = slides.length - 1;
-  if(currentIndex >= slides.length) currentIndex = 0;
-
-  updateCarousel();
-}
-
-/* GO TO */
-function goToSlide(index){
-  currentIndex = index;
-  updateCarousel();
-}
-
-/* AUTO SLIDE */
-setInterval(()=>{
-  window.moveSlide(1);
-},5000);
-
-/* INIT */
-updateCarousel();
-
-
-
-
-
-window.openGalleryModal = function(){
-  const modal = document.getElementById("galleryModal");
-  if(modal){
-    modal.style.display = "block";
-    document.body.style.overflow = "hidden"; // prevent background scroll
-  }
-}
-
-window.closeGalleryModal = function(){
-  const modal = document.getElementById("galleryModal");
-  if(modal){
-    modal.style.display = "none";
-    document.body.style.overflow = "auto";
-  }
-}
-
-/* close when clicking outside content */
-document.addEventListener("click", function(e){
-  const modal = document.getElementById("galleryModal");
-  if(e.target === modal){
-    closeGalleryModal();
-  }
-});
