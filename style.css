@@ -1206,8 +1206,12 @@ iframe {
   }
 
   .story-photo-strip {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    row-gap: 22px;
+    grid-template-columns: repeat(4, minmax(140px, 1fr));
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
   }
 
   .entourage {
@@ -1262,11 +1266,6 @@ iframe {
   .story-text p {
     font-size: 13px;
     line-height: 1.7;
-  }
-
-  .story-photo-strip {
-    grid-template-columns: 1fr;
-    gap: 18px;
   }
 
   .story-photo-strip .story-image:nth-child(1) .polaroid,
