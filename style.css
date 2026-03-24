@@ -568,6 +568,59 @@ nav a {
 }
 
 /* =========================
+   PLAYLIST
+========================= */
+.playlist-section {
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.76), transparent 34%),
+    linear-gradient(180deg, #f8f2ea 0%, #efe3d5 100%);
+}
+
+.playlist-card {
+  width: min(100%, 920px);
+  margin: 28px auto 0;
+  padding: clamp(22px, 3vw, 34px);
+  text-align: left;
+  border-radius: 28px;
+  background: rgba(255,255,255,0.84);
+  border: 1px solid rgba(212,163,115,0.16);
+  box-shadow: 0 18px 40px rgba(107,79,59,0.08);
+}
+
+.playlist-kicker {
+  margin-bottom: 10px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #9f7a57;
+}
+
+.playlist-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.1;
+  color: #6b4f3b;
+}
+
+.playlist-copy {
+  margin-top: 14px;
+  margin-bottom: 22px;
+  font-size: clamp(14px, 1.4vw, 16px);
+  line-height: 1.65;
+  color: #6f5a47;
+}
+
+.playlist-embed {
+  display: block;
+  width: 100%;
+  height: 352px;
+  margin-top: 0;
+  border: 0;
+  border-radius: 22px;
+  box-shadow: inset 0 0 0 1px rgba(31, 27, 24, 0.08);
+}
+
+/* =========================
    ENTOURAGE
 ========================= */
 .entourage {
@@ -1018,6 +1071,10 @@ iframe {
     height: 320px;
   }
 
+  .playlist-embed {
+    height: 380px;
+  }
+
   .timeline-track {
     left: 54px;
   }
@@ -1137,6 +1194,15 @@ iframe {
 
   .story-title {
     font-size: clamp(34px, 11vw, 46px);
+  }
+
+  .playlist-card {
+    padding: 18px;
+  }
+
+  .playlist-embed {
+    height: 400px;
+    border-radius: 18px;
   }
 
   .story-section::before {
