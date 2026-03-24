@@ -1,573 +1,689 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Venz & Angeline Wedding</title>
 
-<title>Pagaduan & Hernandez Nuptials</title>
-
-<!-- SEO -->
-<meta name="description" content="Join us as we celebrate the wedding of Venz & Angeline on December 3, 2026.">
-
-<!-- Styles -->
 <link rel="stylesheet" href="style.css">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
-<!-- AOS -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- CURTAIN INTRO -->
-<div id="curtainIntro" role="button" aria-label="Open invitation">
+<!-- NAV -->
+<nav>
+  <div class="logo">V & A</div>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul id="site-menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#story">Our Story</a></li>
+    <li><a href="#attire">Attire</a></li>
+    <li><a href="#timeline">Wedding Timeline</a></li>
+    <li><a href="#entourage">Entourage</a></li>
+    <li><a href="#venue">Venue</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#rsvp">RSVP</a></li>
+  </ul>
+</nav>
 
-  <div class="curtain left"></div>
-  <div class="curtain right"></div>
+<!-- HERO -->
+<section class="hero" id="home">
 
-  <div class="tap-message">
-    Tap to Open
+  <div class="hero-bg"></div>
+
+  <div class="hero-content">
+
+    <!-- LOGO -->
+    <img src="logo.png" class="hero-logo" alt="Wedding Logo">
+
+    <h1>Venz & Angeline</h1>
+    <p>We are getting married</p>
+    <p>December 3, 2026</p>
+
+    <button class="btn" onclick="scrollToSection('rsvp')">RSVP Now</button>
+
   </div>
+</section>
 
-</div>
+<!-- VERSE -->
+<section class="section verse-section" id="verse">
+  <div class="verse-card">
+    <p class="verse-label">Bible Verse</p>
+    <blockquote class="verse-text">
+      "And now these three remain: faith, hope and love. But the greatest of these is love."
+    </blockquote>
+    <p class="verse-ref">1 Corinthians 13:13</p>
+  </div>
+</section>
 
 
 <!-- PETALS -->
 <canvas id="petals"></canvas>
 
-
-<!-- MUSIC CONTROL -->
-<div class="music-control" onclick="toggleMusic()" aria-label="Toggle music">
-🎵 Music
-</div>
-
-<audio id="bgMusic" loop preload="auto">
-  <source src="music.mp3" type="audio/mp3">
-</audio>
-
-
-<main>
-
-<!-- HERO -->
-<section class="hero">
-
-  <div class="overlay"></div>
-
-  <div class="hero-content" data-aos="fade-up">
-
-<div class="hero-logo">
-<img src="logo.png" alt="VA Monogram">
-</div>
-
-<h1>Venz & Angeline</h1>
-
-
-    <p class="date">#heaVENZenttoANGELINE</p>
-    <p class="date">December 3, 2026</p>
-
-
-
-    <div id="countdown"></div>
-
-    <a href="#message" class="btn">View Invitation</a>
-
-  </div>
-
+<!-- STORY TITLE -->
+<section class="section story-title-section" id="story">
+  <h1 class="story-title">Our Love Story</h1>
 </section>
 
+<!-- STORY (SCALED SECTION) -->
+<section class="section story-section" >
 
+  <div class="story-scale-wrapper">
+    <div class="story-fixed">
 
-<section class="section dark">
+      <div class="story-container">
 
+        <!-- IMAGE -->
+        <div class="story-image">
+          <div class="polaroid">
+            <img src="prenup1.jpg" alt="Couple Photo">
+          </div>
 <!--
-    <p>
-      Join us for a blessed and beautiful celebration as we begin our new chapter together.
-      We are excited to share this special moment with you.
-    </p>
+          <div class="decor decor-top">🪶</div>
+          <div class="decor decor-bottom">🌿</div> -->
+        </div>
 
--->
+        <!-- TEXT -->
+        <div class="story-text">
 
-</section>
+          <h3>From Glances to Chances</h3>
 
+          <p>
+            It all began in a place dedicated to care and healing—a hospital where two lives quietly crossed paths.
+          </p>
 
+          <p>
+            October 18, 2022, Venz arrived for his final job interview, a moment filled with anticipation and hope. As he waited,
+            Angeline happened to notice him—just a simple glance, nothing extraordinary at the time,
+            yet it would become the beginning of something meaningful.
+          </p>
 
-<!-- PARALLAX -->
-<section class="parallax-photo">
+          <p>
+            Soon after, Venz joined the team as an IT professional, while Angeline continued her work as an accountant.
+            What started as casual conversations in the workplace gradually grew into a genuine friendship.
+            Day by day, they found comfort in each other’s presence—sharing stories,  laughter,
+            and small moments that made ordinary days feel a little more special.
+            Over time, that friendship blossomed into something deeper.
+          </p>
 
-  <div class="parallax-layer back"></div>
+          <p>
+            After five months of getting to know each other, Venz and Angeline took a step forward 
+            and became a couple—choosing not just to share time, but to share their lives.From that unexpected meeting in 
+            a hospital hallway to the journey they now continue together, their story is a reminder that love often finds us
+            in the most ordinary places, at the most unexpected times.
+          </p>
 
-  <div class="parallax-layer front">
-    <h2 data-aos="zoom-in">Our Love Story</h2>
-    
-  </div>
-</section>
+        </div>
 
-<section class="section dark">
+      </div>
 
+      <div class="story-container reverse">
 
-    
-    <!-- <h2>Join Us</h2> -->
-    <p> It all began in a place dedicated to care and healing—a hospital where two lives quietly crossed paths.</p>
-    <br>
-    <p> October 18, 2022, Venz arrived for his final job interview, a moment filled with anticipation and hope. As he waited, Angeline happened to notice him—just a simple glance, nothing extraordinary at the time, yet it would become the beginning of something meaningful. </p>
-    <br>
-    <p>Soon after, Venz joined the team as an IT professional, while Angeline continued her work as an accountant. What started as casual conversations in the workplace gradually grew into a genuine friendship. Day by day, they found comfort in each other’s presence—sharing stories,  laughter, and small moments that made ordinary days feel a little more special. Over time, that friendship blossomed into something deeper.</p>
-    <br>
-    <p>After five months of getting to know each other, Venz and Angeline took a step forward and became a couple—choosing not just to share time, but to share their lives.From that unexpected meeting in a hospital hallway to the journey they now continue together, their story is a reminder that love often finds us in the most ordinary places, at the most unexpected times. </p>
-    <br>
-    <p>And now, they look forward to the next chapter—together.</p>
-  </div>
+        <!-- TEXT -->
+        <div class="story-text">
 
-</section>
+          <h3>Choosing Forever</h3>
 
+          <p>
+            What began as a quiet connection slowly turned into a love built on patience, trust, and shared dreams.
+            Through simple routines, meaningful conversations, and unwavering support, they discovered a partnership
+            that felt steady, sincere, and worth holding onto.
+          </p>
 
-<!-- GALLERY -->
-<section class="section">
+          <p>
+            Together, they learned that love is not only found in grand moments, but also in the gentle, everyday ways
+            two people choose one another. In laughter, in challenges, and in the calm spaces in between, their bond
+            became stronger with time.
+          </p>
 
-  <h2 data-aos="fade-up">Prenup Photos</h2>
+          <p>
+            Now, as they prepare for marriage, they carry with them every memory, lesson, and blessing that shaped
+            their journey. With grateful hearts, they step forward hand in hand, ready to build a life rooted in faith,
+            joy, and a love that continues to grow.
+          </p>
 
-  <div class="carousel" id="carousel">
+        </div>
 
-    <div class="carousel-track" id="carouselTrack">
+        <!-- IMAGE -->
+        <div class="story-image">
+          <div class="polaroid">
+            <img src="prenup2.jpg" alt="Couple Photo">
+          </div>
 
-      <!-- ALL YOUR IMAGES -->
-      <img src="prenup1.jpg" onclick="openLightbox(this)">
-      <img src="prenup2.jpg" onclick="openLightbox(this)">
-      <img src="prenup3.jpg" onclick="openLightbox(this)">
-      <img src="prenup4.jpg" onclick="openLightbox(this)">
-      <img src="prenup5.jpg" onclick="openLightbox(this)">
-      <img src="prenup6.jpg" onclick="openLightbox(this)">
-      <img src="prenup7.jpg" onclick="openLightbox(this)">
-      <img src="prenup8.jpg" onclick="openLightbox(this)">
-      <img src="prenup9.jpg" onclick="openLightbox(this)">
-      <img src="prenup10.jpg" onclick="openLightbox(this)">
-      <img src="prenup11.jpg" onclick="openLightbox(this)">
-      <img src="prenup12.jpg" onclick="openLightbox(this)">
-      <img src="prenup13.jpg" onclick="openLightbox(this)">
-      <img src="prenup14.jpg" onclick="openLightbox(this)">
-      <img src="prenup15.jpg" onclick="openLightbox(this)">
-      <img src="prenup16.jpg" onclick="openLightbox(this)">
-      <img src="prenup17.jpg" onclick="openLightbox(this)">
-      <img src="prenup18.jpg" onclick="openLightbox(this)">
-      <img src="prenup19.jpg" onclick="openLightbox(this)">
-      <img src="prenup20.jpg" onclick="openLightbox(this)">
-      <img src="prenup21.jpg" onclick="openLightbox(this)">
-      <img src="prenup22.jpg" onclick="openLightbox(this)">
-      <img src="prenup23.jpg" onclick="openLightbox(this)">
-      <img src="prenup24.jpg" onclick="openLightbox(this)">
-      <img src="prenup25.jpg" onclick="openLightbox(this)">
-      <img src="prenup26.jpg" onclick="openLightbox(this)">
-      <img src="prenup27.jpg" onclick="openLightbox(this)">
-      <img src="prenup28.jpg" onclick="openLightbox(this)">
-      <img src="prenup29.jpg" onclick="openLightbox(this)">
-      <img src="prenup30.jpg" onclick="openLightbox(this)">
-      <img src="prenup31.jpg" onclick="openLightbox(this)">
-      <img src="prenup32.jpg" onclick="openLightbox(this)">
-      <img src="prenup33.jpg" onclick="openLightbox(this)">
-      <img src="prenup34.jpg" onclick="openLightbox(this)">
-      <img src="prenup35.jpg" onclick="openLightbox(this)">
-      <img src="prenup36.jpg" onclick="openLightbox(this)">
-      <img src="prenup37.jpg" onclick="openLightbox(this)">
-      <img src="prenup38.jpg" onclick="openLightbox(this)">
-      <img src="prenup39.jpg" onclick="openLightbox(this)">
-      <img src="prenup40.jpg" onclick="openLightbox(this)">
-      <img src="prenup41.jpg" onclick="openLightbox(this)">
-      <img src="prenup42.jpg" onclick="openLightbox(this)">
-      <img src="prenup43.jpg" onclick="openLightbox(this)">
-      <img src="prenup44.jpg" onclick="openLightbox(this)">
-      <img src="prenup45.jpg" onclick="openLightbox(this)">
-      <img src="prenup46.jpg" onclick="openLightbox(this)">
-      <img src="prenup48.jpg" onclick="openLightbox(this)">
+        </div>
+
+      </div>
+
+      <div class="story-photo-strip" aria-label="Our story photos">
+        <div class="story-image">
+          <div class="polaroid">
+            <img src="prenup19.jpg" alt="Couple portrait">
+          </div>
+        </div>
+        <div class="story-image">
+          <div class="polaroid">
+            <img src="prenup4.jpg" alt="Couple moment">
+          </div>
+        </div>
+        <div class="story-image">
+          <div class="polaroid">
+            <img src="prenup5.jpg" alt="Engagement portrait">
+          </div>
+        </div>
+        <div class="story-image">
+          <div class="polaroid">
+            <img src="prenup22.jpg" alt="Couple together">
+          </div>
+        </div>
+      </div>
 
     </div>
-
-    <!-- CONTROLS -->
-    <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
-    <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
-
-    <!-- DOTS -->
-    <div class="carousel-dots" id="carouselDots"></div>
-
   </div>
 
-<button onclick="openGalleryModal()" class="btn">
-  View All Photos
-</button>
-
 </section>
 
+<!-- ATTIRE -->
+<section class="section" id="attire">
+  <h2>Attire</h2>
+  <p class="attire-intro">
+    Formal elegance with modesty - please join us in attire that is conservative and refined.
+    <span>1 Timothy 2:9</span>
+  </p>
 
-<!-- LIGHTBOX -->
-<div id="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img" alt="Expanded image">
-</div>
+  <div class="attire-layout">
+    <div class="attire-content">
+      <div class="attire-card attire-section-card">
+        <h3>Principal Sponsors</h3>
+        <div class="attire-card-body">
+          <div class="attire-copy">
+            <div class="attire-columns">
+              <div class="attire-block">
+                <h4>Ladies</h4>
+                <p class="attire-note">Any gown or style of your preference.</p>
+                <div class="color-palette" aria-label="Women attire colors">
+                  <div class="color-swatch">
+                    <span class="swatch" style="background:#BFCFBB;"></span>
+                    <strong>Sage Hint</strong>
+                    <small>#BFCFBB</small>
+                  </div>
+                  <div class="color-swatch">
+                    <span class="swatch" style="background:#CFE3D2;"></span>
+                    <strong>Mint</strong>
+                    <small>#CFE3D2</small>
+                  </div>
+                  <div class="color-swatch">
+                    <span class="swatch" style="background:#8EA58C;"></span>
+                    <strong>Sage</strong>
+                    <small>#8EA58C</small>
+                  </div>
+                  <div class="color-swatch">
+                    <span class="swatch" style="background:#738A6E;"></span>
+                    <strong>Moss</strong>
+                    <small>#738A6E</small>
+                  </div>
+                </div>
+              </div>
+              <div class="attire-block">
+                <h4>Gentlemen</h4>
+                <p><strong>Top:</strong> Beige Barong</p>
+                <p><strong>Pants:</strong> Feel free to wear slacks in any color of your choice.</p>
+              </div>
+            </div>
+          </div>
+          <div class="attire-model-grid">
+            <div class="attire-samples">
+              <div class="attire-model-frame">
+                <img src="ninangs.png" alt="Ninang attire sample">
+              </div>
+              <p class="attire-model-caption">Ninang</p>
+            </div>
+            <div class="attire-samples">
+              <div class="attire-model-frame attire-model-frame-alt">
+                <img src="ninongs.png" alt="Ninong attire sample">
+              </div>
+              <p class="attire-model-caption">Ninong</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="attire-card attire-section-card">
+        <h3>Secondary Sponsors</h3>
+        <div class="attire-card-body">
+          <div class="attire-copy">
+            <div class="attire-columns">
+              <div class="attire-block">
+                <h4>Ladies</h4>
+                <p class="attire-note">Any gown or style of your preference.</p>
+                <div class="color-palette" aria-label="Secondary sponsors attire colors">
+                  <div class="color-swatch">
+                    <span class="swatch" style="background:#B9CFE3;"></span>
+                    <strong>Powder Blue</strong>
+                    <small>#B9CFE3</small>
+                  </div>
+                  <div class="color-swatch">
+                    <span class="swatch" style="background:#6E8AA6;"></span>
+                    <strong>Steel Blue</strong>
+                    <small>#6E8AA6</small>
+                  </div>
+                  <div class="color-swatch">
+                    <span class="swatch" style="background:#4C5F7A;"></span>
+                    <strong>Dusty Navy</strong>
+                    <small>#4C5F7A</small>
+                  </div>
+                  <div class="color-swatch">
+                    <span class="swatch" style="background:#7083A1;"></span>
+                    <strong>Slate Blue</strong>
+                    <small>#7083A1</small>
+                  </div>
+                </div>
+              </div>
+              <div class="attire-block">
+                <h4>Gentlemen</h4>
+                <p><strong>Top:</strong> Beige Barong</p>
+                <p><strong>Pants:</strong> Feel free to wear slacks in any color of your choice.</p>
+              </div>
+            </div>
+          </div>
+          <div class="attire-model-grid attire-model-grid-single">
+            <div class="attire-samples">
+              <div class="attire-model-frame">
+                <img src="bridesmaid.png" alt="Secondary sponsors ladies attire sample">
+              </div>
+              <p class="attire-model-caption">Bride's Maid</p>
+            </div>
+            <div class="attire-samples">
+              <div class="attire-model-frame attire-model-frame-alt">
+                <img src="groomsmen.png" alt="Secondary sponsors gentlemen attire sample">
+              </div>
+              <p class="attire-model-caption">Gentlemen</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<section class="section dark">
-
-
-
-
-
-
+      <div class="attire-card attire-section-card">
+        <h3>Guests</h3>
+        <div class="attire-card-body">
+          <div class="attire-copy">
+            <div class="attire-columns">
+              <div class="attire-block">
+                <h4>Ladies</h4>
+                <p class="attire-note">Any gown or style of your preference.</p><br>
+                <div class="color-palette" aria-label="Guest attire colors">
+                  <div class="color-swatch">
+                    <span class="swatch" style="background:#E6C8B9;"></span>
+                    <strong>Blush</strong>
+                    <small>#E6C8B9</small>
+                  </div>
+                  <div class="color-swatch">
+                    <span class="swatch" style="background:#E5DCCE;"></span>
+                    <strong>Light Taupe</strong>
+                    <small>#E5DCCE</small>
+                  </div>
+                  <div class="color-swatch">
+                    <span class="swatch" style="background:#C3B7AA;"></span>
+                    <strong>Warm Gray</strong>
+                    <small>#C3B7AA</small>
+                  </div>
+                </div>
+              </div>
+              <div class="attire-block">
+                <h4>Gentlemen</h4>
+                <p><strong>Top:</strong> Any collared shirt</p>
+                <p><strong>Pants:</strong> Any color of your choice</p>
+              </div>
+            </div>
+          </div>
+          <div class="attire-model-grid">
+            <div class="attire-samples">
+              <div class="attire-model-frame">
+                <img src="guest_ladies.png" alt="Women guest attire sample">
+              </div>
+              <p class="attire-model-caption">Women Guests</p>
+            </div>
+            <div class="attire-samples">
+              <div class="attire-model-frame attire-model-frame-alt">
+                <img src="guest_men.png" alt="Men guest attire sample">
+              </div>
+              <p class="attire-model-caption">Men Guests</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
 
 <!-- TIMELINE -->
+<section class="section timeline-section" id="timeline">
+  <h2>Wedding Timeline</h2>
 
-<section class="section timeline-section">
+  <div class="timeline-board">
+    <div class="timeline-track"></div>
 
-  <h2 class="timeline-title">Wedding Activities</h2>
-  <p class="timeline-subtitle">#heaVENZenttoANGELINE</p>
-
-  <div class="timeline-alt">
-
-    <div class="timeline-row left" data-aos="fade-right">
-      <div class="content">
+    <article class="timeline-item">
+      <div class="timeline-icon" aria-hidden="true">⛪</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-copy">
         <h3>THE CEREMONY</h3>
         <p>Joined by grace, bound in love</p>
       </div>
-    </div>
+    </article>
 
-    <div class="timeline-row right" data-aos="fade-left">
-      <div class="content">
+    <article class="timeline-item">
+      <div class="timeline-icon" aria-hidden="true">🫙</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-copy">
         <h3>THE PRELUDE: MEMORY HOUR</h3>
-        <p>Capture, scent, speak, shine<br>Memories begin here!</p>
+        <p>Capture, scent, speak, shine</p>
+        <p>Memories begin here!</p>
       </div>
-    </div>
+    </article>
 
-    <div class="timeline-row left" data-aos="fade-right">
-      <div class="content">
+    <article class="timeline-item">
+      <div class="timeline-icon" aria-hidden="true">💃</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-copy">
         <h3>THE FIRST DANCE</h3>
         <p>Steps of love, rhythm of forever</p>
       </div>
-    </div>
+    </article>
 
-    <div class="timeline-row right" data-aos="fade-left">
-      <div class="content">
+    <article class="timeline-item">
+      <div class="timeline-icon" aria-hidden="true">🍽</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-copy">
         <h3>DINNER</h3>
-        <p>Feast, play, gift, gather<br>Joy around the table!</p>
+        <p>Feast, play, gift, gather</p>
+        <p>Joy around the table!</p>
       </div>
-    </div>
+    </article>
 
-    <div class="timeline-row left" >
-      <div class="content">
+    <article class="timeline-item">
+      <div class="timeline-icon" aria-hidden="true">🎥</div>
+      <div class="timeline-dot"></div>
+      <div class="timeline-copy">
         <h3>THE PREMIERE</h3>
         <p>Stories shared, new chapter begins</p>
       </div>
-    </div>
-
+    </article>
   </div>
-
 </section>
 
-<section class="section dark">
+<!-- ENTOURAGE -->
+<section class="section" id="entourage">
+  <h2>Wedding Entourage</h2>
+
+  <div class="entourage">
 
 
-
-
-
-
-</section>
-
-
-
-
-<!--ENTORAGE-->
-
-<section class="section list-view">
-
-  <h2 data-aos="fade-up">Wedding Entourage</h2>
-
-  <div class="entourage-list">
+    <h3 class="script">Pagaduan & Hernandez</h3>
+    <p class="sub">Nuptials</p>
 
     <!-- Officiant -->
-    <div class="group">
+    <div>
       <h4>Officiant</h4>
       <p>SIC/KNP</p>
     </div>
 
-    <!-- Couple -->
-    <div class="group highlight">
-      <h4>Groom</h4>
-      <p>Venancio Pagaduan Jr.</p>
-    </div>
 
-    <!-- Parents -->
-    <div class="group">
+    <div class="entourage-grid">
+
+      <!-- Parents -->
+      <div>
       <h4>Groom's Parents</h4>
       <p>Norma Pagaduan</p>
       <p>Venancio Pagaduan Sr.</p>
-    </div>
+      </div>
 
-    <div class="group">
+      <div>
       <h4>Bride's Parents</h4>
       <p>Michelle Hernandez</p>
       <p>Albert Hernandez Jr.</p>
+      </div>
+
     </div>
 
-    <!-- Best Men -->
-    <div class="group">
-      <h4>Best Men</h4>
+    <h3 class="script">Principal Sponsors</h3>
+
+    <div class="entourage-grid two">
+
+      <div>
+        <h4>Ninong</h4>
+        <p>Mr. Ramoncito Livelo</p>
+        <p>Mr. Gilbert Hernandez</p>
+        <p>Mr. Lawrence Omila</p>
+        <p>Mr. Aries Zabala</p>
+        <p>Mr. Michael Doan Ng</p>
+        <p>Mr. Alfredo Chic</p>
+        <p>Mr. Magdalino Antipolo</p>
+        <p>Mr. Cid Parcero</p>
+        
+      </div>
+
+      <div>
+        <h4>Ninang</h4>
+        <p>Ms. Carolina Bungay</p>
+        <p>Ms. Ma Cleah Al Ghannameh</p>
+        <p>Ms. Christy Omila</p>
+        <p>Ms. Arlene Zabala</p>
+        <p>Ms. Bambi Ng</p>
+        <p>Ms. Anne Chico</p>
+        <p>Ms. Chang</p>
+        <p>Ms. Maria Lourdes Parcero</p>
+        
+      </div>
+
+    </div>
+
+    <div class="entourage-grid two">
+      <div>
+        <h4>Best Men</h4>
       <p>Jhon Patrick Bonilla</p>
       <p>Enrico Pagaduan</p>
-    </div>
+      </div>
 
-    <!-- Maids of Honor -->
-    <div class="group">
-      <h4>Maids of Honor</h4>
+      <div>
+        <h4>Maids of Honor</h4>
       <p>Mary Dianne Marquez</p>
       <p>Maria Antoinette Hernandez</p>
+      </div>
     </div>
 
-    <!-- Principal Sponsors -->
-<div class="group sponsors">
+    <h3 class="script">Secondary Sponsors</h3>
 
-  <h4 class="section-title">Principal Sponsors</h4>
-  <div class="sponsors-grid-2col">
-    <div>Carolina Bungay</div><div>Ramoncito Livelo</div>
-    <div>Ma Cleah Al Ghannameh</div><div>Gilbert Hernandez</div>
-    <div>Christy Omila</div><div>Lawrence Omila</div>
-    <div>Arlene Zabala</div><div>Aries Zabala</div>
-    <div>Bambi Ng</div><div>Michael Doan Ng</div>
-    <div>Anne Chico</div><div>Alfredo Chico</div>
-    <div>Cang</div><div>Magdalino Antipolo</div>
-    <div>Maria Lourdes Parcero</div><div>Cid Parcero</div>
-  </div>
+    <div class="entourage-grid three">
 
-  <h4 class="section-title">Secondary Sponsors</h4>
-  <div class="sponsors-grid-2col">
-    <div>Mayett Castro</div><div>Francis Pagaduan</div>
-    <div>Santa Grace Abayon</div><div>Teodulo Tanedo</div>
-    <div>Elma Carlos</div><div>Mark Louies Grijaldo</div>
-    <div>Franchezcka Pagaduan</div><div>Mar Jhun Abao</div>
-    <div>Francheska Perez</div><div>Ryan Abellana</div>
-    <div>Anne Margarette Syra Hernandez</div><div>Miken Karl De Dios</div>
-    <div>Anne Marichelle Hernandez</div><div>Daichi Batoon</div>
-    <div>Anne Mariabella Sofia Hernandez</div><div>Albert Matthew Sean Hernandez</div>
-  </div>
-
-</div>
-
-    <!-- Special Roles -->
-    <div class="group">
+      <div>
       <h4>Bible Bearer</h4>
       <p>Axel Sanjer Abayon</p>
-    </div>
+      </div>
 
-    <div class="group">
+      <div>
       <h4>Flower Girls</h4>
       <p>Shekinah Antofina</p>
       <p>Kiara Olivia Castro</p>
       <p>Shenelle Antofina</p>
-    </div>
+      </div>
 
-    <div class="group">
+      <div>
       <h4>Sign Bearers</h4>
       <p>Riolonzo Pablo Parcero & Ryujin Kael Parcero</p>
+      </div>
+
     </div>
 
-    <div class="group highlight">
-      <h4>Bride</h4>
-      <p>Maria Angeline Hernandez</p>
+    <div class="entourage-grid two">
+
+      <div>
+        <h4>Groomsmen</h4>
+        <p>Francis Pagaduan</p>
+        <p>Teodulo Tanedo</p>
+        <p>Mark Louies Grijaldo</p>
+        <p>Mar Jhun Abao</p>
+        <p>Ryan Abellana</p>
+        <p>Brian Quimpan</p>
+        <p>Miken Karl De Dios</p>
+        <p>Daichi Batoon</p>
+        <p>Albert Matthew Sean Hernandez</p>
+
+
+      </div>
+
+      <div>
+        <h4>Bridesmaids</h4>
+        <p>Mayett Castro</p>
+        <p>Santa Grace Abayon</p>
+        <p>Elma Carlos</p>
+        <p>Franchezcka Pagaduan</p>
+        <p>Francheska Perez</p>
+        <p>Anne Margarette Syra Hernandez</p>
+        <p>Anne Marichelle Hernandez</p>
+        <p>Anne Mariabella Sofia Hernandez</p>
+      </div>
+
     </div>
 
+    <div class="entourage-grid three">
+
+      <div>
+        <h4>Ring Bearer</h4>
+        <p>Dominic Kristofer Salo</p>
+      </div>
+
+      <div>
+        <h4>Coin Bearer</h4>
+        <p>Marcus Lucas Ofalda</p>
+      </div>
+
+      <div>
+        <h4>Bible Bearer</h4>
+        <p>Mateo Lorenzo Ofalda</p>
+      </div>
+
+    </div>
+
+    <div class="entourage-grid one">
+      <div>
+        <h4>Flower Girls</h4>
+        <p>Elyjah Janel Rejano</p>
+        <p>Zoellen Arianne Buson</p>
+        <p>Chloe Amary’s Landong</p>
+      </div>
+    </div>
 
   </div>
-
 </section>
 
-
-<section class="section dark">
-
-
-
-
-</section>
-
-
-
-
-<section class="section">
-
+<!-- VENUE -->
+<section class="section venue-section" id="venue">
   <h2>Venue</h2>
-  <p class="venue-address">Asuncion Subdivision, Purok 3 Emilio Aguinaldo Highway, Biga 1, Silang, 4118 Cavite</p>
 
-  <div class="venue-container">
-
-    <div class="venue-info">
-      <h3>Le Don's Garden</h3>
-      
-      <p>
-        Join us as we celebrate our special day in this beautiful venue.
-      </p>
-
-      <!-- Use NORMAL map link here -->
-      <a href="https://maps.app.goo.gl/agzGZke87nmgfq4A9" target="_blank" class="btn">
-        Open in Google Maps
-      </a>
-    </div>
-
-    <div class="venue-map" data-aos="zoom-in">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.1179854952275!2d120.975124!3d14.246338999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd7e64c487c7d9%3A0x30ef2d99353c781f!2sLe%20Don%27s%20Garden!5e0!3m2!1sen!2sph!4v1773924431975!5m2!1sen!2sph"
-        width="100%" 
-        height="100%" 
-        style="border:0;" 
-        allowfullscreen="" 
+  <div class="venue-layout">
+    <div class="venue-map-card">
+      <p class="venue-kicker">Navigation</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.1171852776124!2d120.97457169032212!3d14.246385696093778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd7e64c487c7d9%3A0x30ef2d99353c781f!2sLe%20Don&#39;s%20Garden!5e0!3m2!1sen!2sph!4v1774341745385!5m2!1sen!2sph"
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
 
+    <div class="venue-contact-card">
+      <p class="venue-kicker">Contact Information</p>
+      <h3>Need help finding the venue?</h3>
+      <p class="venue-copy">
+        If you need assistance on the day, you may reach out to the bride or groom for directions and venue concerns.
+      </p>
+
+      <div class="venue-contact-list">
+        <div class="venue-contact-item">
+          <span class="venue-label">Bride</span>
+          <strong>Angeline</strong>
+          <span>09XX XXX XXXX</span>
+        </div>
+
+        <div class="venue-contact-item">
+          <span class="venue-label">Groom</span>
+          <strong>Venz</strong>
+          <span>09XX XXX XXXX</span>
+        </div>
+      </div>
+    </div>
   </div>
 
 </section>
 
+<!-- GALLERY -->
+<section class="section gallery-section" id="gallery">
+  <h2>Gallery</h2>
 
-<section class="section dark">
+  <div class="gallery-board">
+    <article class="gallery-note note-yellow">
+      <span class="gallery-pin" aria-hidden="true"></span>
+      <img src="prenup3.jpg" alt="Couple gallery photo 1">
+      <p>Little moments, big memories.</p>
+    </article>
 
-  <h2>Our Playlist</h2>
-  <p class="spotify-subtitle">Songs that tell our story</p>
-  <p>"A collection of songs we love and cherish"</p>
+    <article class="gallery-note note-pink">
+      <span class="gallery-pin" aria-hidden="true"></span>
+      <img src="prenup4.jpg" alt="Couple gallery photo 2">
+      <p>Smiles tucked into every frame.</p>
+    </article>
 
-  <div class="spotify-container" data-aos="fade-up">
+    <article class="gallery-note note-green">
+      <span class="gallery-pin" aria-hidden="true"></span>
+      <img src="prenup5.jpg" alt="Couple gallery photo 3">
+      <p>Our favorite pages in one place.</p>
+    </article>
 
-    <iframe 
-      src="https://open.spotify.com/embed/playlist/2duVXEmRIkhDMTe09u7RQC?utm_source=generator"
-      width="100%" 
-      height="380" 
-      style="border-radius:12px; border:none;"
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy">
-    </iframe>
+    <article class="gallery-note note-cream">
+      <span class="gallery-pin" aria-hidden="true"></span>
+      <img src="prenup6.jpg" alt="Couple gallery photo 4">
+      <p>Saved for the story we keep retelling.</p>
+    </article>
 
+    <article class="gallery-note note-yellow">
+      <span class="gallery-pin" aria-hidden="true"></span>
+      <img src="prenup7.jpg" alt="Couple gallery photo 5">
+      <p>Love looked easy in this light.</p>
+    </article>
+
+    <article class="gallery-note note-pink">
+      <span class="gallery-pin" aria-hidden="true"></span>
+      <img src="prenup8.jpg" alt="Couple gallery photo 6">
+      <p>Gentle days, golden memories.</p>
+    </article>
+
+    <article class="gallery-note note-green">
+      <span class="gallery-pin" aria-hidden="true"></span>
+      <img src="prenup9.jpg" alt="Couple gallery photo 7">
+      <p>Still one of our favorite frames.</p>
+    </article>
+
+    <article class="gallery-note note-cream">
+      <span class="gallery-pin" aria-hidden="true"></span>
+      <img src="prenup10.jpg" alt="Couple gallery photo 8">
+      <p>Kept close, like a folded note.</p>
+    </article>
   </div>
 
 </section>
-
-
-
-
-<!-- GUESTBOOK -->
-<section class="section">
-
-  
-
-</section>
-
 
 <!-- RSVP -->
-<section class="section">
-
+<section class="section" id="rsvp">
   <h2>RSVP</h2>
-
-  <a href="https://forms.gle/YOURFORM" target="_blank" class="btn">
-    RSVP Now
-  </a>
-
+  <button class="btn">Open RSVP Form</button>
 </section>
 
-
-<a href="https://forms.gle/YOURFORM" target="_blank" class="floating-rsvp">
-RSVP
-</a>
-
-
-
-<section class="section dark">
-
-
-
-
-</section>
-
-</main>
-
-
-<footer>
-<p>Pagaduan & Hernandez Wedding 2026</p>
-</footer>
-
-
-<!-- Scripts -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script src="script.js"></script>
-
-
-
-
-<!-- FULL GALLERY MODAL -->
-<div id="galleryModal">
-
-  <span class="gallery-close" onclick="closeGalleryModal()">×</span>
-
-  <div class="gallery-modal-content">
-
-    <!-- YOUR FULL COLLAGE -->
-    <div class="gallery">
-
-      <img src="prenup1.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup2.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup3.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup4.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup5.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup6.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup7.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup8.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup9.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup10.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup11.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup12.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup13.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup14.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup15.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup16.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup17.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup18.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup19.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup20.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup21.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup22.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup23.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup24.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup25.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup26.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup27.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup28.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup29.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup30.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup31.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup32.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup33.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup34.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup35.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup36.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup37.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup38.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup39.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup40.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup41.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup42.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup43.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup44.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup45.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup46.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup47.jpg" loading="lazy" onclick="openLightbox(this)">
-      <img src="prenup48.jpg" loading="lazy" onclick="openLightbox(this)">
-
-    </div>
-
-  </div>
-
-</div>
-
-
 
 </body>
 </html>
