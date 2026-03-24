@@ -490,6 +490,26 @@ nav a {
   color: #9f7a57;
 }
 
+.venue-address {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: #fffaf5;
+  border: 1px solid rgba(191, 156, 121, 0.18);
+  font-size: clamp(14px, 1.35vw, 16px);
+  line-height: 1.6;
+  color: #6f5a47;
+}
+
+.venue-address strong {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #a17c4f;
+}
+
 .venue-map-card iframe {
   margin-top: 0;
   height: 420px;
