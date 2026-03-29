@@ -1357,6 +1357,29 @@ iframe {
     gap: 10px;
   }
 
+  .color-palette[aria-label="Guest attire colors"] {
+    gap: 6px;
+    justify-content: space-between;
+  }
+
+  .color-palette[aria-label="Guest attire colors"] .color-swatch {
+    width: 50px;
+  }
+
+  .color-palette[aria-label="Guest attire colors"] .swatch {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 6px;
+  }
+
+  .color-palette[aria-label="Guest attire colors"] strong {
+    font-size: 9px;
+  }
+
+  .color-palette[aria-label="Guest attire colors"] small {
+    font-size: 7px;
+  }
+
   .attire-model-grid-single {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1454,6 +1477,28 @@ iframe {
 }
 
 @media (max-width: 480px) {
+  .color-palette[aria-label="Guest attire colors"] {
+    gap: 4px;
+  }
+
+  .color-palette[aria-label="Guest attire colors"] .color-swatch {
+    width: 42px;
+  }
+
+  .color-palette[aria-label="Guest attire colors"] .swatch {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+  }
+
+  .color-palette[aria-label="Guest attire colors"] strong {
+    font-size: 8px;
+  }
+
+  .color-palette[aria-label="Guest attire colors"] small {
+    font-size: 6px;
+  }
+
   .timeline-board {
     gap: 4px;
   }
