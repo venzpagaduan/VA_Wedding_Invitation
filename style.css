@@ -407,25 +407,32 @@ nav a {
   position: relative;
   width: min(100%, 980px);
   margin: 32px auto 0;
-  padding: 24px 0 12px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(12px, 1.8vw, 24px);
+  padding: 8px 0;
+  align-items: center;
 }
 
 .timeline-track {
   position: absolute;
-  top: 10px;
-  bottom: 10px;
-  left: 110px;
-  width: 2px;
+  top: 50%;
+  left: 32px;
+  right: 32px;
+  width: auto;
+  height: 2px;
   background: #1f1b18;
+  transform: translateY(-50%);
 }
 
 .timeline-item {
   position: relative;
   display: grid;
-  grid-template-columns: 88px 44px minmax(0, 1fr);
+  grid-template-rows: minmax(88px, 1fr) 70px 30px 70px minmax(88px, 1fr);
+  justify-items: center;
   align-items: center;
-  gap: 14px;
-  min-height: 110px;
+  min-height: 320px;
+  z-index: 1;
 }
 
 .timeline-icon {
@@ -433,12 +440,12 @@ nav a {
   place-items: center;
   width: 64px;
   height: 64px;
-  margin-left: auto;
-  margin-right: 6px;
+  margin: 0;
   font-size: 40px;
 }
 
 .timeline-dot {
+  grid-row: 3;
   width: 22px;
   height: 22px;
   border-radius: 50%;
@@ -448,7 +455,50 @@ nav a {
 }
 
 .timeline-copy {
-  text-align: left;
+  width: min(100%, 180px);
+  padding: 12px 14px;
+  text-align: center;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.82);
+  border: 1px solid rgba(191, 156, 121, 0.18);
+  box-shadow: 0 12px 28px rgba(107,79,59,0.08);
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  background: rgba(31, 27, 24, 0.28);
+  transform: translateX(-50%);
+}
+
+.timeline-item:nth-of-type(odd)::before {
+  top: calc(50% - 72px);
+  height: 72px;
+}
+
+.timeline-item:nth-of-type(even)::before {
+  top: 50%;
+  height: 72px;
+}
+
+.timeline-item:nth-of-type(odd) .timeline-copy {
+  grid-row: 1;
+  align-self: end;
+}
+
+.timeline-item:nth-of-type(odd) .timeline-icon {
+  grid-row: 2;
+}
+
+.timeline-item:nth-of-type(even) .timeline-icon {
+  grid-row: 4;
+}
+
+.timeline-item:nth-of-type(even) .timeline-copy {
+  grid-row: 5;
+  align-self: start;
 }
 
 .timeline-copy h3 {
@@ -1199,8 +1249,11 @@ iframe {
   }
 
   .timeline-board {
-    width: min(100%, 620px);
-    padding-top: 10px;
+    width: 100%;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 8px;
+    padding: 4px 0;
+    display: grid;
   }
 
   .venue-layout {
@@ -1220,35 +1273,83 @@ iframe {
   }
 
   .timeline-track {
-    left: 66px;
+    top: 50%;
+    left: 20px;
+    right: 20px;
+    width: auto;
+    height: 2px;
+    bottom: auto;
+    transform: translateY(-50%);
   }
 
   .timeline-item {
-    grid-template-columns: 40px 28px minmax(0, 1fr);
-    gap: 12px;
-    min-height: 92px;
+    grid-template-columns: none;
+    grid-template-rows: minmax(56px, 1fr) 38px 20px 38px minmax(56px, 1fr);
+    justify-items: center;
+    gap: 0;
+    min-height: 210px;
   }
 
   .timeline-icon {
-    width: 34px;
-    height: 34px;
-    margin-right: 0;
-    font-size: 24px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
   }
 
   .timeline-dot {
-    justify-self: center;
-    width: 18px;
-    height: 18px;
-    border-width: 3px;
+    grid-row: 3;
+    width: 14px;
+    height: 14px;
+    border-width: 2px;
+  }
+
+  .timeline-copy {
+    width: min(100%, 112px);
+    padding: 8px 8px 10px;
+    text-align: center;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.86);
+    border: 1px solid rgba(191, 156, 121, 0.16);
+    box-shadow: 0 8px 18px rgba(107,79,59,0.07);
+  }
+
+  .timeline-item::before,
+  .timeline-item:nth-of-type(odd)::before,
+  .timeline-item:nth-of-type(even)::before {
+    display: block;
+  }
+
+  .timeline-item:nth-of-type(odd) .timeline-copy,
+  .timeline-item:nth-of-type(even) .timeline-copy {
+    align-self: center;
+  }
+
+  .timeline-item:nth-of-type(odd) .timeline-copy {
+    grid-row: 1;
+    align-self: end;
+  }
+
+  .timeline-item:nth-of-type(odd) .timeline-icon {
+    grid-row: 2;
+  }
+
+  .timeline-item:nth-of-type(even) .timeline-icon {
+    grid-row: 4;
+  }
+
+  .timeline-item:nth-of-type(even) .timeline-copy {
+    grid-row: 5;
+    align-self: start;
   }
 
   .timeline-copy h3 {
-    font-size: clamp(9px, 2.5vw, 14px);
+    font-size: clamp(8px, 1.9vw, 11px);
+    line-height: 1.15;
   }
 
   .timeline-copy p {
-    font-size: clamp(7px, 1.8vw, 9px);
+    font-size: clamp(6px, 1.4vw, 8px);
+    line-height: 1.15;
   }
 
   .attire-model-grid {
@@ -1353,6 +1454,44 @@ iframe {
 }
 
 @media (max-width: 480px) {
+  .timeline-board {
+    gap: 4px;
+  }
+
+  .timeline-track {
+    left: 14px;
+    right: 14px;
+  }
+
+  .timeline-item {
+    grid-template-rows: minmax(48px, 1fr) 32px 18px 32px minmax(48px, 1fr);
+    min-height: 180px;
+  }
+
+  .timeline-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+  }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-copy {
+    width: min(100%, 88px);
+    padding: 6px 6px 8px;
+  }
+
+  .timeline-copy h3 {
+    font-size: 8px;
+  }
+
+  .timeline-copy p {
+    font-size: 6px;
+  }
+
   .story-section {
     padding-left: 12px;
     padding-right: 12px;
