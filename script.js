@@ -52,6 +52,30 @@ sections.forEach(sec => {
   sec.style.transition = 'all 0.8s ease';
 });
 
+const storyPhotoStack = document.querySelector('.story-photo-stack');
+
+if (storyPhotoStack) {
+  const setStoryPhotoState = (isExpanded) => {
+    storyPhotoStack.classList.toggle('is-expanded', isExpanded);
+    storyPhotoStack.setAttribute('aria-expanded', String(isExpanded));
+    storyPhotoStack.setAttribute(
+      'aria-label',
+      isExpanded ? 'Collapse photo stack' : 'Open photo stack'
+    );
+  };
+
+  storyPhotoStack.addEventListener('click', () => {
+    setStoryPhotoState(!storyPhotoStack.classList.contains('is-expanded'));
+  });
+
+  storyPhotoStack.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      setStoryPhotoState(!storyPhotoStack.classList.contains('is-expanded'));
+    }
+  });
+}
+
 
 
 
