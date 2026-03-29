@@ -8,7 +8,10 @@ canvas.height = window.innerHeight;
 const petalSources = [
   "petal1.png",
   "petal2.png",
-  "petal3.png"
+  "petal_green.png",
+  "petal_green2.png",
+  "petal_blue.png",
+  "petal_blue2.png"
 ];
 
 const petalImages = [];
