@@ -93,28 +93,36 @@ if (canvas) {
   const petalSources = [
     "petal1.png",
     "petal2.png",
-    "petal3.png"
+    "petal_green.png",
+    "petal_green2.png",
+    "petal_blue.png",
+    "petal_blue2.png"
   ];
 
   const petalImages = [];
-  let loaded = 0;
+  let resolved = 0;
 
   let petals = [];
 
-  // preload images
+  // Preload every petal asset and keep going even if one file fails.
   petalSources.forEach(src => {
     const img = new Image();
-    img.src = src;
 
-    img.onload = () => {
-      loaded++;
-      if (loaded === petalSources.length) {
+    const handleResolved = () => {
+      resolved++;
+      if (resolved === petalSources.length && petalImages.length) {
         init();
         draw();
       }
     };
 
-    petalImages.push(img);
+    img.onload = () => {
+      petalImages.push(img);
+      handleResolved();
+    };
+
+    img.onerror = handleResolved;
+    img.src = src;
   });
 
   function init() {
