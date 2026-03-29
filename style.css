@@ -732,6 +732,33 @@ nav a {
   margin: 3px 0;
 }
 
+.section-divider {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 0 40px 28px;
+  color: #a17c4f;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(161,124,79,0), rgba(161,124,79,0.55), rgba(161,124,79,0));
+}
+
+.section-divider span {
+  white-space: nowrap;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(14px, 1.8vw, 18px);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 /* =========================
    STORY
 ========================= */
