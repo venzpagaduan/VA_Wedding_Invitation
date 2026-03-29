@@ -1220,7 +1220,7 @@ iframe {
   }
 
   .timeline-track {
-    left: 54px;
+    left: 66px;
   }
 
   .timeline-item {
@@ -1237,6 +1237,7 @@ iframe {
   }
 
   .timeline-dot {
+    justify-self: center;
     width: 18px;
     height: 18px;
     border-width: 3px;
