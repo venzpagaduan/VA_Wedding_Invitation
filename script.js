@@ -76,6 +76,45 @@ if (storyPhotoStack) {
   });
 }
 
+const countdown = document.getElementById("wedding-countdown");
+
+if (countdown) {
+  const countdownValues = {
+    days: countdown.querySelector('[data-unit="days"]'),
+    hours: countdown.querySelector('[data-unit="hours"]'),
+    minutes: countdown.querySelector('[data-unit="minutes"]'),
+    seconds: countdown.querySelector('[data-unit="seconds"]')
+  };
+  const weddingDate = new Date("December 3, 2026 00:00:00");
+
+  const updateCountdown = () => {
+    const now = new Date();
+    const distance = weddingDate - now;
+
+    if (distance <= 0) {
+      countdownValues.days.textContent = "0";
+      countdownValues.hours.textContent = "0";
+      countdownValues.minutes.textContent = "0";
+      countdownValues.seconds.textContent = "0";
+      return;
+    }
+
+    const totalSeconds = Math.floor(distance / 1000);
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    countdownValues.days.textContent = String(days);
+    countdownValues.hours.textContent = String(hours).padStart(2, "0");
+    countdownValues.minutes.textContent = String(minutes).padStart(2, "0");
+    countdownValues.seconds.textContent = String(seconds).padStart(2, "0");
+  };
+
+  updateCountdown();
+  window.setInterval(updateCountdown, 1000);
+}
+
 
 
 
